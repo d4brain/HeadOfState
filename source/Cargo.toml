@@ -1,0 +1,19 @@
+[package]
+name = "head_of_state"
+version = "1.0.0"
+edition = "2024"
+description = "HEAD OF STATE – 3D Catch-Wrestling in Rust (macroquad)"
+
+[dependencies]
+macroquad = { version = "0.4", features = ["audio"] }
+
+[profile.release]
+opt-level = 3
+codegen-units = 4
+strip = true
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
